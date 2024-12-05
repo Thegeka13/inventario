@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 const consultarInventario = require("./api/consultarInventario"); 
 const restarInventario = require("./api/restarInventario"); 
 const sumarInventario = require("./api/sumarInventario");
-const inventario = require('./api/inventario');
+//const inventario = require('./api/inventario');
 
 app.use("/api", consultarInventario); 
 app.use("/api", restarInventario); 
