@@ -1,22 +1,31 @@
-const express = require("express");
-const router = express.Router(); // Usamos router en vez de app
-
 const dotenv = require("dotenv");
-dotenv.config();
-
 const { connection } = require("../config.db");
 
-// Se Realiza la consulta de la base de datos de todos los productos existentes 
-const getInventario = (request, response) => {
+// Cargar las variables de entorno
+dotenv.config();
+
+// Función para obtener todo el inventario
+const obtenerTodoElInventario = (req, res) => {
+    // Realizar la consulta a la base de datos
     connection.query("SELECT * FROM inventario", (error, results) => {
         if (error) {
             console.error("Error al consultar inventario:", error);
-            return response.status(500).json({ error: "Error al obtener inventario" });
+            return res.status(500).json({ error: "Error al obtener el inventario." });
         }
-        response.status(200).json(results);
+
+        // Devolver los resultados en formato JSON
+        res.status(200).json(results);
     });
 };
 
-router.route("/inventario").get(getInventario);
-
-module.exports = router;
+// Exportar como función serverless
+module.exports = (req, res) => {
+    // Verificar el método de la solicitud
+    if (req.method === "GET") {
+        obtenerTodoElInventario(req, res); // Llamar a la función para manejar la solicitud GET
+    } else {
+        // Si el método no es permitido, devolver un error 405
+        res.setHeader("Allow", ["GET"]);
+        res.status(405).end(`Method ${req.method} Not Allowed`);
+    }
+};
