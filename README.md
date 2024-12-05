@@ -39,9 +39,20 @@ Rutas
     Método: POST 
     Descripción: Suma una cantidad específica al inventario de un producto. La cantidad y el ID del producto se proporcionan en el cuerpo de la solicitud.
 
+    {
+    "producto_id": 1,
+    "cantidad": -10
+    }
 
 4.- Restar Cantidad al Inventario
     Ruta: /inventario/restar 
     Método: POST 
     Descripción: Resta una cantidad específica del inventario de un producto. La cantidad y el ID del producto se proporcionan en el cuerpo de la solicitud.
 
+    {
+    "producto_id": 1,
+    "cantidad": -10
+    }
+
+    Link de la ruta a la aplicación: https://inventario-coral.vercel.app
+    Link al GitHub: https://github.com/Thegeka13/inventario
