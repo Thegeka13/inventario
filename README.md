@@ -58,4 +58,5 @@ Rutas
 
 
 Link de la ruta a la aplicación: https://inventario-coral.vercel.app
+
 Link al GitHub: https://github.com/Thegeka13/inventario
