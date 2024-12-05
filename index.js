@@ -15,7 +15,7 @@ app.use("/api", restarInventario);
 app.use("/api", sumarInventario);
 app.use("/api", inventario);
 
-app.listen(process.env.PORT || 25060, () => {
+app.listen(3000, () => {
     console.log("Servidor corriendo en el puerto 3300");
 });
 
