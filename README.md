@@ -53,7 +53,7 @@ Rutas
 
     {
     "producto_id": 1,
-    "cantidad": -10
+    "cantidad": 10
     }
 
 4.- Restar Cantidad al Inventario
@@ -66,7 +66,7 @@ Rutas
 
     {
     "producto_id": 1,
-    "cantidad": -10
+    "cantidad": 10
     }
 
 
