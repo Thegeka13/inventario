@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Cargamos las rutas desde el archivo rutas/inventario.js
+// Cargar las rutas desde el archivo rutas/inventario.js
 app.use(require('./api/inventario'));
 
 app.listen(process.env.PORT || 25060, () => {
