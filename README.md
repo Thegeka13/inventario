@@ -1,4 +1,4 @@
-# inventario
+# Modulo Inventario
 
 Descripción General
 
