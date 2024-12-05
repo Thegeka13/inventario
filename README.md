@@ -21,13 +21,19 @@ La conexión a la base de datos se realiza mediante un módulo de configuración
 Rutas
 
 1.-Obtener Todos los Productos
+    
     Ruta: /inventario 
+    
     Método: GET 
+    
     Descripción: Obtiene todos los productos existentes en la tabla inventario.
 
 2.- Obtener Producto por ID
+    
     Ruta: /inventario/id 
+    
     Método: POST 
+    
     Descripción: Obtiene un producto específico de la tabla inventario mediante su producto_id proporcionado en el cuerpo de la solicitud.
 
     Ejemplo del cuerpo post:
@@ -37,9 +43,13 @@ Rutas
     }
 
 3.- Sumar Cantidad al Inventario
+    
     Ruta: /inventario/sumar 
+    
     Método: POST 
-    Descripción: Suma una cantidad específica al inventario de un producto. La cantidad y el ID del producto se proporcionan en el cuerpo de la solicitud.
+    
+    Descripción: Suma una cantidad específica al inventario de un producto. La cantidad y el ID del producto se proporcionan en el cuerpo 
+    de la solicitud.
 
     {
     "producto_id": 1,
@@ -47,8 +57,11 @@ Rutas
     }
 
 4.- Restar Cantidad al Inventario
+    
     Ruta: /inventario/restar 
+    
     Método: POST 
+    
     Descripción: Resta una cantidad específica del inventario de un producto. La cantidad y el ID del producto se proporcionan en el cuerpo de la solicitud.
 
     {
