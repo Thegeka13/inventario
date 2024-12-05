@@ -5,6 +5,7 @@ Descripción General
 Este módulo de Node.js y Express.js gestiona las operaciones del inventario en una base de datos. Incluye rutas para consultar todos los productos, obtener un producto específico por ID desde el cuerpo de la solicitud, sumar y restar cantidades del inventario.
 
 Dependencias
+
 express: Framework web para Node.js.
 
 dotenv: Cargar variables de entorno desde un archivo .env.
@@ -53,6 +54,7 @@ Rutas
     "producto_id": 1,
     "cantidad": -10
     }
+
 
     Link de la ruta a la aplicación: https://inventario-coral.vercel.app
     Link al GitHub: https://github.com/Thegeka13/inventario
