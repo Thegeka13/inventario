@@ -13,7 +13,7 @@ const sumarInventario = require("./api/sumarInventario");
 app.use("/api", consultarInventario); 
 app.use("/api", restarInventario); 
 app.use("/api", sumarInventario);
-app.use("/api", inventario);
+//app.use("/api", inventario);
 
 app.listen(3000, () => {
     console.log("Servidor corriendo en el puerto 3300");
