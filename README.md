@@ -19,6 +19,7 @@ Conexión a la Base de Datos
 La conexión a la base de datos se realiza mediante un módulo de configuración (config.db) que exporta la conexión connection.
 
 Rutas
+
 1.-Obtener Todos los Productos
     Ruta: /inventario 
     Método: GET 
@@ -56,5 +57,5 @@ Rutas
     }
 
 
-    Link de la ruta a la aplicación: https://inventario-coral.vercel.app
-    Link al GitHub: https://github.com/Thegeka13/inventario
+Link de la ruta a la aplicación: https://inventario-coral.vercel.app
+Link al GitHub: https://github.com/Thegeka13/inventario
