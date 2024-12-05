@@ -22,7 +22,7 @@ Rutas
 
 1.-Obtener Todos los Productos
     
-    Ruta: /inventario 
+    Ruta: https://inventarioapi.vercel.app/api/inventario
     
     Método: GET 
     
@@ -30,7 +30,7 @@ Rutas
 
 2.- Obtener Producto por ID
     
-    Ruta: /inventario/id 
+    Ruta: https://inventarioapi.vercel.app/api/consultarInventario
     
     Método: POST 
     
@@ -44,7 +44,7 @@ Rutas
 
 3.- Sumar Cantidad al Inventario
     
-    Ruta: /inventario/sumar 
+    Ruta: https://inventarioapi.vercel.app/api/sumarInventario
     
     Método: POST 
     
@@ -58,7 +58,7 @@ Rutas
 
 4.- Restar Cantidad al Inventario
     
-    Ruta: /inventario/restar 
+    Ruta: https://inventarioapi.vercel.app/api/restarInventario
     
     Método: POST 
     
@@ -70,6 +70,6 @@ Rutas
     }
 
 
-Link de la ruta a la aplicación: https://inventario-coral.vercel.app
+Link de la ruta a la aplicación: https://inventarioapi.vercel.app/
 
 Link al GitHub: https://github.com/Thegeka13/inventario
