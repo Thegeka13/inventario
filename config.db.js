@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
     user: process.env.DBUSER,
     password: process.env.DBPASS,
     database: process.env.DBNAME,
-    port: process.env.DBPORT || 3306 // Por defecto, MySQL usa el puerto 3306
+    port: process.env.DBPORT || 25060 // Por defecto, MySQL usa el puerto 3306
 });
 
 function connectDatabase() {
