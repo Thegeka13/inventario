@@ -34,12 +34,4 @@ function connectDatabase() {
 
 connectDatabase();
 
-
-console.log('DBHOST:', process.env.DBHOST);
-console.log('DBUSER:', process.env.DBUSER);
-console.log('DBPASS:', process.env.DBPASS);
-console.log('DBNAME:', process.env.DBNAME);
-console.log('DBPORT:', process.env.DBPORT);
-
-
 module.exports = { connection };
