@@ -6,7 +6,7 @@ dotenv.config();
 
 // Función para consultar el inventario
 const consultarInventario = (req, res) => {
-    const { producto_id } = req.query; // Suponiendo que el producto se pasa como parámetro de consulta
+    const { producto_id } = req.body; // Obtener el producto_id del cuerpo de la solicitud
 
     if (!producto_id) {
         return res.status(400).json({ error: "ID de producto requerido." });
@@ -28,5 +28,10 @@ const consultarInventario = (req, res) => {
 
 // Exportar la función como manejador de solicitudes
 module.exports = (req, res) => {
-    consultarInventario(req, res);
+    if (req.method === "POST") {
+        consultarInventario(req, res);
+    } else {
+        res.setHeader("Allow", ["POST"]);
+        res.status(405).end(`Método ${req.method} no permitido`);
+    }
 };
