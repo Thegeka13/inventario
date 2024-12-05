@@ -5,7 +5,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Cargar las rutas desde el archivo rutas/inventario.js
-app.use(require('./api/inventario'));
+const consultarInventario = require("./api/consultarInventario"); 
+const restarInventario = require("./api/restarInventario"); 
+const sumarInventario = require("./api/sumarInventario");
+const inventario = require('./api/inventario');
+
+app.use("/api", consultarInventario); 
+app.use("/api", restarInventario); 
+app.use("/api", sumarInventario);
+app.use("/api", inventario);
 
 app.listen(process.env.PORT || 25060, () => {
     console.log("Servidor corriendo en el puerto 3300");
