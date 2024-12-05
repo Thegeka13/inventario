@@ -7,7 +7,7 @@ dotenv.config();
 // Función para obtener todo el inventario
 const obtenerTodoElInventario = (req, res) => {
     // Realizar la consulta a la base de datos
-    connection.query("SELECT * FROM inventario", (error, results) => {
+    connection.query("SELECT producto.*, inventario.* FROM inventario INNER JOIN producto ON producto.producto_id = inventario.producto_id;", (error, results) => {
         if (error) {
             console.error("Error al consultar inventario:", error);
             return res.status(500).json({ error: "Error al obtener el inventario." });
