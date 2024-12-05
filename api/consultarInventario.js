@@ -12,7 +12,7 @@ const consultarInventario = (req, res) => {
         return res.status(400).json({ error: "ID de producto requerido." });
     }
 
-    connection.query("SSELECT producto.*, inventario.* FROM inventario INNER JOIN producto ON producto.producto_id = inventario.producto_id  WHERE inventario.producto_id = ?;", [producto_id], (error, results) => {
+    connection.query("SELECT producto.*, inventario.* FROM inventario INNER JOIN producto ON producto.producto_id = inventario.producto_id  WHERE inventario.producto_id = ?;", [producto_id], (error, results) => {
         if (error) {
             console.error("Error al consultar el inventario:", error);
             return res.status(500).json({ error: "Error al consultar el inventario." });
