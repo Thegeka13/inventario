@@ -20,7 +20,18 @@ const obtenerTodoElInventario = (req, res) => {
 
 // Exportar como función serverless
 module.exports = (req, res) => {
+    // Configurar los encabezados CORS
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Permitir todos los orígenes
+    res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS"); // Métodos permitidos
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Encabezados permitidos
+
     // Verificar el método de la solicitud
+    if (req.method === "OPTIONS") {
+        // Si es una solicitud OPTIONS, devolver un 204 No Content
+        res.status(204).end();
+        return;
+    }
+
     if (req.method === "GET") {
         obtenerTodoElInventario(req, res); // Llamar a la función para manejar la solicitud GET
     } else {
