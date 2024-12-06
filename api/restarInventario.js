@@ -53,12 +53,23 @@ const restarInventario = (req, res) => {
 
 // Exportar como función serverless
 module.exports = (req, res) => {
+    // Configurar los encabezados CORS
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Permitir todos los orígenes
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS"); // Métodos permitidos
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Encabezados permitidos
+
     // Verificar el método de la solicitud
+    if (req.method === "OPTIONS") {
+        // Si es una solicitud OPTIONS, devolver un 204 No Content
+        res.status(204).end();
+        return;
+    }
+
     if (req.method === "POST") {
         restarInventario(req, res); // Llamar a la función para manejar la solicitud POST
     } else {
         // Si el método no es permitido, devolver un error 405
         res.setHeader("Allow", ["POST"]);
-        res.status(405).end(`Method ${req.method} Not Allowed`);
+        res.status(405).end(`Método ${req.method} no permitido`);
     }
 };
